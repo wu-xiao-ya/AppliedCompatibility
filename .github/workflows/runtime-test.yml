@@ -61,11 +61,24 @@ jobs:
 
     - name: Configure client runtime
       run: |
-        mkdir -p run/client
+        mkdir -p run/client/config run/server/config
         cat <<EOF >> run/client/options.txt
         onboardAccessibility:false
         pauseOnLostFocus:false
         EOF
+        cat <<EOF > run/client/config/appcompat.cfg
+        general {
+            B:enableBuildingGadgets=false
+            B:enableEnderIOAppliedEnergistics=false
+            B:enableGTCEu=false
+            B:enableLegacyAeItemIdRemapping=true
+            B:enableMMCE=true
+            B:enablePackagedAuto=false
+            B:enablePackagingProvider=false
+            B:enablePneumaticCraft=false
+        }
+        EOF
+        cp run/client/config/appcompat.cfg run/server/config/appcompat.cfg
 
     - name: Run client runtime test
       run: xvfb-run -a timeout 10m ./gradlew runClient --no-daemon -Pmod_version="${MOD_VERSION}"
