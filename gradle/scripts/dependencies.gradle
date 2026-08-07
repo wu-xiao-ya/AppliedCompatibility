@@ -9,23 +9,23 @@ dependencies {
     modRuntimeOnly("curse.maven:fugue-1005815:8230893")
 
     // HEI
-    modImplementation "mezz:jei:4.31.2"
+    modCompileOnly "mezz:jei:4.31.2"
 
     // mouse tweaks
-    modImplementation "curse.maven:mouse-tweaks-unofficial-461660:5876158"
+    modCompileOnly "curse.maven:mouse-tweaks-unofficial-461660:5876158"
 
     //ae2
     modImplementation("com.github.FormlessDragon:Applied-Energistics-2-Supergiant:v1.0.10:dev")
 
-    modImplementation "com.github.FormlessDragon:MEGACells:v1.0.0:dev"
+    modCompileOnly "com.github.FormlessDragon:MEGACells:v1.0.0:dev"
 
     //mekeng
-    modImplementation "curse.maven:mekanism-268560:2835175"
-    modImplementation "com.github.FormlessDragon:Applied-Mekanistics:v1.1.0:dev"
+    modCompileOnly "curse.maven:mekanism-268560:2835175"
+    modCompileOnly "com.github.FormlessDragon:Applied-Mekanistics:v1.1.0:dev"
 
     //packagedauto
-    modImplementation "thelm.packagedauto:PackagedAuto-1.12.2:1.0.24.73"
-    modImplementation "thelm.packagingprovider:PackagingProvider-1.12.2:1.0.0.2"
+    modCompileOnly "thelm.packagedauto:PackagedAuto-1.12.2:1.0.24.73"
+    modCompileOnly "thelm.packagingprovider:PackagingProvider-1.12.2:1.0.0.2"
 
     //gtceu
     modCompileOnly("maven.modrinth:codechicken-lib-cre:3.3.5")
@@ -33,24 +33,24 @@ dependencies {
 
     //mmce
     modRuntimeOnly 'CraftTweaker2:CraftTweaker2-MC1120-Main:1.12-4.1.20.711'
-    modImplementation "curse.maven:the-one-probe-245211:2667280"
+    modCompileOnly "curse.maven:the-one-probe-245211:2667280"
     modImplementation "curse.maven:modularmachinery-community-edition-817377:7372951"
     modCompileOnly("curse.maven:modular-machinery-community-edition-addons-1236022:8175673")
 
     // Inventory Bogo-Sorter
-    modImplementation "curse.maven:inventory-bogosorter-632327:8231600"
+    modCompileOnly "curse.maven:inventory-bogosorter-632327:8231600"
     modRuntimeOnly("com.cleanroommc:modularui:3.1.6") {transitive = false}
-    modRuntimeOnly "curse.maven:key-binding-patch-928895:5951859"
+    modCompileOnly "curse.maven:key-binding-patch-928895:5951859"
 
     //EIO
-    modImplementation("info.loenwind.autosave:AutoSave:1.12.2-1.0.11")
-    modImplementation("info.loenwind.autoconfig:AutoConfig:1.12.2-1.0.2")
-    modImplementation("com.enderio.core:EnderCore:1.12.2-0.5.78:core")
-    modImplementation("com.enderio.core:EnderCore:1.12.2-0.5.78")
-    modImplementation("com.enderio:EnderIO:1.12.2-5.3.72") {transitive = false}
+    modCompileOnly("info.loenwind.autosave:AutoSave:1.12.2-1.0.11")
+    modCompileOnly("info.loenwind.autoconfig:AutoConfig:1.12.2-1.0.2")
+    modCompileOnly("com.enderio.core:EnderCore:1.12.2-0.5.78:core")
+    modCompileOnly("com.enderio.core:EnderCore:1.12.2-0.5.78")
+    modCompileOnly("com.enderio:EnderIO:1.12.2-5.3.72") {transitive = false}
 
     modCompileOnly("curse.maven:plusticminusbad-376903:4703532")
-    modImplementation("curse.maven:sonar-core-239418:2645156")
-    modImplementation("curse.maven:building-gadgets-298187:3005950")
-    modImplementation("curse.maven:pneumaticcraft-repressurized-281849:2978408")
+    modCompileOnly("curse.maven:sonar-core-239418:2645156")
+    modCompileOnly("curse.maven:building-gadgets-298187:3005950")
+    modCompileOnly("curse.maven:pneumaticcraft-repressurized-281849:2978408")
 }
