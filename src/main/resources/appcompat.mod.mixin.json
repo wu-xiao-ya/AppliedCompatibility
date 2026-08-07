@@ -20,6 +20,7 @@
     "enderioae.MixinTileConduitBundle",
     "gtceu.MixinMetaTileEntityHolder",
     "gtceu.MixinMods",
+    "mmce.MixinAEFluidInventoryUpgradeable",
     "mmce.MixinCommonProxy",
     "mmce.MixinItemBlockMEMachineComponent",
     "mmce.MixinMEFluidInputBus",
