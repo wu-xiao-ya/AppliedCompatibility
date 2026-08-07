@@ -132,16 +132,35 @@ public abstract class MixinMEItemInputBus extends MEItemBus implements IGridTick
     }
 
     @Redirect(
-        method = {"markNoUpdate", "uploadSettings"},
+        method = "markNoUpdate",
         at = @At(
             value = "INVOKE",
             target = "Lappeng/api/networking/ticking/ITickManager;alertDevice(Lappeng/api/networking/IGridNode;)Z",
             remap = false
         ),
-        require = 0
+        require = 1
     )
-    private boolean appcompat$redirectAlert(final ITickManager tick,
-                                            final appeng.api.networking.IGridNode oldNode) {
+    private boolean appcompat$redirectMarkNoUpdateAlert(final ITickManager tick,
+                                                         final appeng.api.networking.IGridNode oldNode) {
+        return appcompat$alertManagedNode();
+    }
+
+    @Redirect(
+        method = "uploadSettings",
+        at = @At(
+            value = "INVOKE",
+            target = "Lappeng/api/networking/ticking/ITickManager;alertDevice(Lappeng/api/networking/IGridNode;)Z",
+            remap = false
+        ),
+        require = 1
+    )
+    private boolean appcompat$redirectUploadSettingsAlert(final ITickManager tick,
+                                                           final appeng.api.networking.IGridNode oldNode) {
+        return appcompat$alertManagedNode();
+    }
+
+    @Unique
+    private boolean appcompat$alertManagedNode() {
         final IManagedGridNode node = ((IGridConnectedTile) this).getMainNode();
         if (node != null) {
             final IGrid grid = node.getGrid();

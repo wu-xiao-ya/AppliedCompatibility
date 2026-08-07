@@ -11,6 +11,8 @@ public final class AppCompatTooltipProvider implements TooltipProvider {
 
     @Override
     public void registerBlockEntityBaseClasses(final BaseClassRegistration registration) {
-        if (AppCompatMixinDecisions.mmceLoaded) registration.addBaseBlockEntity(MEMachineComponent.class, BlockMEMachineComponent.class);
+        if (AppCompatMixinDecisions.isMMCELoaded()) {
+            registration.addBaseBlockEntity(MEMachineComponent.class, BlockMEMachineComponent.class);
+        }
     }
 }
