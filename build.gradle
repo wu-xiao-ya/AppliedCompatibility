@@ -141,7 +141,6 @@ unimined.minecraft {
         loader "0.5.14-alpha"
         runs.auth.username = minecraft_username
         runs.all {
-            systemProperty("crl.dev.mixin", "${mod_id}.default.mixin.json,${mod_id}.mod.mixin.json")
             systemProperty("net.minecraftforge.gradle.GradleStart.srg.notch-srg", gtceuMappingsSrg.asFile.absolutePath)
             systemProperty("net.minecraftforge.gradle.GradleStart.csvDir", gtceuMappingsCsvDir.get().asFile.absolutePath)
             def extraArgs = propertyString('extra_jvm_args')

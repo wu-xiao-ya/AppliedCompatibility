@@ -83,6 +83,12 @@ jobs:
     - name: Run client runtime test
       run: xvfb-run -a timeout 10m ./gradlew runClient --no-daemon -Pmod_version="${MOD_VERSION}"
 
+    - name: Verify MMCE item input bus mixin
+      run: |
+        log_file="run/client/logs/latest.log"
+        grep -F "MMCE item input bus compatibility mixin decision: apply=true, target=github.kasuminova.mmce.common.tile.MEItemInputBus" "${log_file}"
+        grep -F "Applied MMCE item input bus compatibility mixin to github.kasuminova.mmce.common.tile.MEItemInputBus" "${log_file}"
+
     - name: Run server runtime test
       run: |
         set -euo pipefail
